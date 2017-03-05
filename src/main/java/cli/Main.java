@@ -1,24 +1,24 @@
 package cli;
 
-import main.CvsProcessor;
+import main.CsvProcessor;
 import main.StringToAgentConverter;
 
 public class Main {
-    private CvsProcessor cvsProcessor;
+    private CsvProcessor csvProcessor;
 
-    public Main(CvsProcessor cvsProcessor) {
-        this.cvsProcessor = cvsProcessor;
+    public Main(CsvProcessor csvProcessor) {
+        this.csvProcessor = csvProcessor;
     }
 
     //TODO: add argument validation
     public static void main(String[] args) {
         StringToAgentConverter converter = new StringToAgentConverter();
-        CvsProcessor cvsProcessor = new CvsProcessor(converter);
-        Main main = new Main(cvsProcessor);
+        CsvProcessor csvProcessor = new CsvProcessor(converter);
+        Main main = new Main(csvProcessor);
         main.run(args);
     }
 
     public void run(String[] args) {
-        System.out.println(cvsProcessor.readCvs(args[0]));
+        System.out.println(csvProcessor.readCsv(args[0]));
     }
 }

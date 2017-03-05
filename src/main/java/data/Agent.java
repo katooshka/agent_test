@@ -131,20 +131,4 @@ public class Agent {
         this.autoRenew = builder.autoRenew;
         this.inertiaForSwitch = builder.inertiaForSwitch;
     }
-
-    @Override
-    public String toString() {
-        return "Agent{" +
-                "agentBreed='" + agentBreed + '\'' +
-                ", policyId=" + policyId +
-                ", age=" + age +
-                ", socialGrade=" + socialGrade +
-                ", paymentAtPurchase=" + paymentAtPurchase +
-                ", attributeBrand=" + attributeBrand +
-                ", attributePrice=" + attributePrice +
-                ", attributePromotions=" + attributePromotions +
-                ", autoRenew=" + autoRenew +
-                ", inertiaForSwitch=" + inertiaForSwitch +
-                '}';
-    }
 }

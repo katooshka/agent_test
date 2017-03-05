@@ -9,14 +9,14 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CvsProcessor {
+public class CsvProcessor {
     private StringToAgentConverter converter;
 
-    public CvsProcessor(StringToAgentConverter converter) {
+    public CsvProcessor(StringToAgentConverter converter) {
         this.converter = converter;
     }
 
-    public List<Agent> readCvs(String filename) {
+    public List<Agent> readCsv(String filename) {
         List<Agent> agents = new ArrayList<>();
         try {
             try (BufferedReader br = Files.newBufferedReader(Paths.get(filename))) {
