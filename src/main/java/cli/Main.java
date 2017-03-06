@@ -6,6 +6,9 @@ import main.DataProcessor;
 import main.StringToAgentConverter;
 
 import java.util.List;
+import java.util.Locale;
+
+import static cli.ArgumentsValidator.*;
 
 public class Main {
     private CsvParser csvParser;
@@ -16,8 +19,8 @@ public class Main {
         this.dataProcessor = dataProcessor;
     }
 
-    //TODO: add argument validation
     public static void main(String[] args) {
+        Locale.setDefault(Locale.ROOT);
         StringToAgentConverter converter = new StringToAgentConverter();
         CsvParser csvParser = new CsvParser(converter);
         DataProcessor processor = new DataProcessor();
@@ -26,7 +29,22 @@ public class Main {
     }
 
     public void run(String[] args) {
-        List<Agent> agents = csvParser.readCsv(args[0]);
-        System.out.println(dataProcessor.process(agents, Double.parseDouble(args[1])));
+        try {
+            validateArguments(args);
+        } catch (RuntimeException e) {
+            System.err.println(e.getMessage());
+            showUsage();
+            return;
+        }
+        try {
+            List<Agent> agents = csvParser.readCsv(args[0]);
+            System.out.println(dataProcessor.process(agents, Double.parseDouble(args[1])));
+        } catch (RuntimeException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+    private static void showUsage() {
+        System.err.println("Usage: agents --process <input_file_path> <brand_factor>");
     }
 }
