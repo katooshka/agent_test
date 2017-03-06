@@ -9,10 +9,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CsvProcessor {
+public class CsvParser {
     private StringToAgentConverter converter;
 
-    public CsvProcessor(StringToAgentConverter converter) {
+    public CsvParser(StringToAgentConverter converter) {
         this.converter = converter;
     }
 

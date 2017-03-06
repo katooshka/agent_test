@@ -44,12 +44,16 @@ public class Agent {
         return attributePromotions;
     }
 
-    public boolean isAutoRenew() {
+    public boolean autoRenew() {
         return autoRenew;
     }
 
     public int getInertiaForSwitch() {
         return inertiaForSwitch;
+    }
+
+    public void setAgentBreed(String agentBreed) {
+        this.agentBreed = agentBreed;
     }
 
     public static class Builder {
