@@ -16,6 +16,13 @@ public class CsvParser {
         this.converter = converter;
     }
 
+    /**
+     * Reads CSV file and converts it into a list of Agent.
+     *
+     * @param filename path to input CSV file
+     * @return info about each file entry presented in form of Agent List
+     * @throws RuntimeException if input file cannot be read
+     */
     public List<Agent> readCsv(String filename) {
         List<Agent> agents = new ArrayList<>();
         try {

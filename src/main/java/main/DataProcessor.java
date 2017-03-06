@@ -10,6 +10,13 @@ public class DataProcessor {
     private static final String BREED_C = "Breed_C";
     private static final String BREED_NC = "Breed_NC";
 
+    /**
+     * Processes input file entries and calculates required output values.
+     *
+     * @param agents List of input file entries in a form of Agent List
+     * @param brandFactor int value
+     * @return Result Object containing output fields
+     */
     public Result process(List<Agent> agents, double brandFactor) {
         int breedCAgentsNumber = 0;
         int breedNCAgentsNumber = 0;

@@ -19,6 +19,10 @@ public class Main {
         this.dataProcessor = dataProcessor;
     }
 
+    /**
+     * Initialises required objects, creates new Main object and invokes run
+     * method.
+     */
     public static void main(String[] args) {
         Locale.setDefault(Locale.ROOT);
         StringToAgentConverter converter = new StringToAgentConverter();
@@ -28,6 +32,14 @@ public class Main {
         main.run(args);
     }
 
+    /**
+     * Validates passed arguments, calculates required output values
+     * and prints them to the standard output.
+     * Error messages are printed to the standard error output.
+     *
+     * @param args a String array containing print function name, path to the input file
+     *             and brand factor value
+     */
     public void run(String[] args) {
         try {
             validateArguments(args);
