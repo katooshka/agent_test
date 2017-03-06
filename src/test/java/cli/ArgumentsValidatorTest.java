@@ -3,8 +3,8 @@ package cli;
 import org.junit.Test;
 
 import static cli.ArgumentsValidator.validateArguments;
-import static com.sun.tools.internal.ws.wsdl.parser.Util.fail;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class ArgumentsValidatorTest {
 
