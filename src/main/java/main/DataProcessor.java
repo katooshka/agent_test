@@ -26,6 +26,7 @@ public class DataProcessor {
                     breedNCAgentsNumber++;
                 }
             } else {
+                // update agent's breed for each year if not auto renewed
                 boolean switchedToBreedNC = false;
                 for (int i = 0; i < YEARS_NUMBER; i++) {
                     updateBreedsAgentsNumber(agent, brandFactor);
@@ -33,6 +34,7 @@ public class DataProcessor {
                         switchedToBreedNC = true;
                     }
                 }
+                //update output fields using agent's final values
                 String finalBreed = agent.getAgentBreed();
                 if (initialBreed.equals(finalBreed)) {
                     if (initialBreed.equals(BREED_C)) {
