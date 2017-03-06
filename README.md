@@ -23,9 +23,9 @@ I came up with two approaches to the processing of CSV file. The first is just t
     
     sudo apt-get install git
     
-    git clone https://github.com/katooshka/hacker_news_scraper/
+    git clone https://github.com/katooshka/agent_test/
     
-    cd hacker_news_scraper
+    cd agent_test
     
     mvn clean
     
