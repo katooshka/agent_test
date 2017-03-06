@@ -53,6 +53,5 @@ public class StringToAgentConverter {
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException(NOT_A_NUMBER_ERROR_MESSAGE + e.getMessage());
         }
-
     }
 }

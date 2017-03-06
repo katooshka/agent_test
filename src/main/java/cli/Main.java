@@ -49,8 +49,8 @@ public class Main {
             return;
         }
         try {
-            List<Agent> agents = csvParser.readCsv(args[0]);
-            System.out.println(dataProcessor.process(agents, Double.parseDouble(args[1])));
+            List<Agent> agents = csvParser.readCsv(args[1]);
+            System.out.println(dataProcessor.process(agents, Double.parseDouble(args[2])));
         } catch (RuntimeException e) {
             System.err.println(e.getMessage());
         }

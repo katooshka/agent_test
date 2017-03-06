@@ -33,7 +33,7 @@ public class CsvParser {
                 }
             }
         } catch (IOException e) {
-            throw new RuntimeException("Error occurred while reading input file");
+            throw new RuntimeException("Error occurred while reading input file: " + filename);
         }
         return agents;
     }

@@ -1,8 +1,5 @@
 package cli;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
-
 public class ArgumentsValidator {
 
     /**
@@ -20,10 +17,6 @@ public class ArgumentsValidator {
         String firstArgument = args[0];
         if (!firstArgument.equals("--process")) {
             throw new RuntimeException("Wrong first argument");
-        }
-        String secondArgument = args[1];
-        if (!Files.exists(Paths.get(secondArgument))) {
-            throw new RuntimeException("File does not exist");
         }
         double thirdArgument;
         try {
